@@ -1,0 +1,80 @@
+// ------------------------------------------------------------------------------------------
+// CSS APPLICABLE CLASSES -------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+
+.clear {
+  clear: both !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.mg-top-15 {
+  margin-top: 15px !important;
+}
+
+.pd-15-left {
+  padding-left: 15px !important;
+}
+
+.futura {
+  font-family: Futura Bold, Helvetica, Arial !important;
+}
+
+.futura-oblique {
+  font-family: Oblique !important;
+}
+
+.width-100 {
+  width: 100% !important;
+}
+
+.input-300-wd {
+  width: 300px !important;
+  height: 32px !important;
+  border: 1px solid #787878 !important;
+}
+
+.textarea-400-wd {
+  width: 400px !important;
+  height: 240px !important;
+  border: 1px solid #787878 !important;
+  resize: none !important;
+}
+
+.separation-line {
+  width: 100% !important;
+  height: 1px !important;
+  background: #1C2B35 !important;
+  margin: 15px 0 !important;
+}
+
+.left-edit-content {
+  width: 45% !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+}
+
+
+.right-edit-content {
+  width: 55% !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+}

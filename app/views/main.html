@@ -1,0 +1,175 @@
+<div class="navbar navbar-default" role="navigation">
+  <div >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/">IdRamp</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/">Home</a></li>
+        <li><a ng-href="#/about">About</a></li>
+        <li><a ng-href="#/test">Test</a></li>              
+        <li><a ng-href="#/styleguide">Styleguide</a></li>
+        <li><a ng-href="#/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h5 class="page-title-text">COMPONENTS</h5>
+<div class="page-title-underline"></div>
+
+<h1>H1 TEXT h1 text - Futura</h1>
+<h2>H2 TEXT h2 text - Gotham Book</h2>
+<h3>H3 TEXT h3 text</h3>
+<h4>H4 TEXT h4 text</h4>
+<h5>H5 TEXT h5 text</h5>
+<h6>H6 TEXT h6 text</h6>
+</br>
+<p>PARAGAPH TEXT paragraph text</br>Pour-over try-hard shabby chic crucifix. Hashtag tattooed austin migas fashion axe occupy. 90's gentrify pug paleo, health goth brooklyn chambray kale chips next level aesthetic. Chia beard 90's heirloom, swag wayfarers selfies helvetica venmo green juice.</p>
+</br>
+<h1>COLOR PALETTE</h1>
+<img src="../images/color-palette.png"/>
+</br>
+<h1>INPUTS AND TEXT AREAS</h1>
+<p class="input-title">300px INPUT</p>
+<div class="input-group input-300-wd">
+  <input type="text" class="form-control">
+</div>
+</br>
+<p class="input-title">SEARCH INPUT</p>
+<div class="input-group input-300-wd">
+  <input type="text" class="form-control">
+  <span class="input-group-addon glyphicon glyphicon-search"></span>
+</div>
+<p class="input-title mg-top-15">400px TEXT AREA</p>
+<textarea class="textarea-400-wd"></textarea>
+</br>
+<h1>BUTTONS</h1>
+<p>These buttons are for use within admin modal the green represents the "forward" action and is only an applied state when an update is required. Otherwise, both buttons remain gray. The "cancel" button is to always remain gray as it is not an emphasis action.</p>
+<button class="modal-button-active">SAVE</button>
+<button class="modal-button">CANCEL</button>
+<p class="mg-top-15">This toogle button is used when turning a service on/off within the "DETAILS" tab of the admin modal or to toggle "CONSENTS" within the admin modal.</p>
+<div class="toggle-button toggle-on" ng-class="{'active': isConsents, 'toggle-button-bg-green' : !isConsents}" ng-click="isConsents = !isConsents">
+  <div class="toggle-ball float-left" ng-class="{'toggle-ball-right' : !isConsents}"></div>
+  <div class="toggle-on-check glyphicon glyphicon-ok" ng-class="{'visible' : !isConsents}"></div>
+  <div class="toggle-off-x glyphicon glyphicon-remove" ng-class="{'visible' : isConsents}"></div>
+</div>
+<p class="mg-top-15">This text toggle is for opening/closing add or edit sections</p>
+<div class="modal-action-title-link" ng-click="addingRule = !addingRule">ADD CONSENT <div class="add-rule-x glyphicon glyphicon-remove" ng-class="{'x-rotate' : !addingRule}"></div></div>
+<p class="mg-top-15">This button is included on the service list items when viewed through the admin. It's function is to open an admin control modal for the selected service. I've applied the "float-left" class only to align what you see. Don't include it in the real services list.</p>
+<div style="height: 30px;">
+  <button type="button" class="admin-service-button float-left" data-toggle="modal" data-target="#adminModal">EDIT</button>
+</div>
+<p class="mg-top-15">Left and right edit-content classes allow you to quickly setup specific width containers that play nicely with each other. You'll see them in use in the "CONSENTS" edit/add section of the admin modal.</p>
+<div class="clear mg-top-15">
+  <div class="left-edit-content" style="border: 1px solid #787878; height: 300px; text-align: center;">
+    <h2>45%</h2>
+  </div><div class="right-edit-content" style="border: 1px solid #787878; height: 300px; text-align: center;">
+    <h2>55%</h2>
+  </div>
+  <div class="right-edit-content" style="border: 1px solid #787878; height: 300px; text-align: center;">
+    <h2>45%</h2>
+  </div><div class="left-edit-content" style="border: 1px solid #787878; height: 300px; text-align: center;">
+    <h2>55%</h2>
+  </div>
+</div>
+
+
+</br>
+<h1>TAGS</h1>
+<p class="mg-top-15">I'd Like to count and display the number of tags on each service AND reusable rule.</p>
+<p class="input-title mg-top-15">TAGS ({{tags.length}})</p>
+<p class="mg-top-15">Here is a simple way to list the tags with the ability to remove them using the glyphicon.</p>
+<ul class="tags-list-ul">
+  <li ng-repeat="tag in tags">
+    <div class="inline-block">
+      {{tag.displayName}}   
+    </div> 
+    <div class="remove-tag glyphicon glyphicon-remove"></div>
+  </li>
+</ul>
+<p class="mg-top-15">Here is how they will be displayed in the Service dropdown (without the glyphicon to remove).</p>
+<ul class="tags-list-ul">
+  <li ng-repeat="tag in tags">
+    <div class="inline-block">
+      {{tag.displayName}}   
+    </div> 
+  </li>
+</ul>
+
+<h1>MODAL</h1>
+<p class="mg-top-15">Open the modal to see some of the admin templates. They are mostly complete. I can help finish out the others if you need.</p>
+
+<button type="button" class="modal-button-active" data-toggle="modal" data-target="#adminModal">MODAL</button>
+
+<div class="custom-modal modal fade" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content custom-modal">
+      <div class="modal-body admin-modal-body">
+        <div class="admin-modal-nav-bar">
+          <ul style="height:50px;">
+              <li ng-repeat="tab in tabs" class="admin-modal-nav-bar-item" ng-class="{active:isActiveTab(tab.url)}" ng-click="onClickTab(tab)">{{tab.title}}</li>
+          </ul>
+        </div>
+        <consents-directive></consents-directive>
+        <access-directive></access-directive>
+        <details-directive></details-directive>
+        <saml-directive></saml-directive>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="modal-button-active">SAVE</button>
+        <button type="button" class="modal-button" data-dismiss="modal">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>SERVICES</h1>
+
+<p class="mg-top-15">This is a standard service list item layout as will be used by both employees and admin. I need to get you the drop down piece. I had it somewhere but can't find it at the moment.</p>
+<div class="service-container">
+  <img class="service-logo" src="../images/test-img.png">
+  <div class="right-service-content">
+    <div class="favorite-name-container">
+      <div class="favorite glyphicon glyphicon-star"></div>
+      <div class="service-name">Kaltura</div>
+    </div>
+    <div class="service-purpose-container">
+      <div class="sub-gray-header-sm">PURPOSE</div>
+      <div class="service-purpose">Kaltura is a video learning portal for continuing education and employee onboarding</div>
+    </div>
+  </div>
+</div>
+
+<div class="service-container">
+  <img class="service-logo" src="../images/test-img.png">
+  <div class="right-service-content">
+    <div class="favorite-name-container">
+      <div class="favorite glyphicon glyphicon-star-empty"></div>
+      <div class="service-name">Kaltura</div>
+    </div>
+    <div class="service-purpose-container">
+      <div class="sub-gray-header-sm">PURPOSE</div>
+      <div class="service-purpose">Kaltura is a video learning portal for continuing education and employee onboarding</div>
+    </div>
+  </div>
+</div>
+
+<div class="service-container">
+  <img class="service-logo" src="../images/test-img.png">
+  <div class="right-service-content">
+    <div class="favorite-name-container">
+      <div class="favorite glyphicon glyphicon-star"></div>
+      <div class="service-name">KALTURA</div>
+      <button type="button" class="admin-service-button" data-toggle="modal" data-target="#adminModal">EDIT</button>
+    </div>
+    <div class="service-purpose-container">
+      <div class="sub-gray-header-sm">PURPOSE</div>
+      <div class="service-purpose">Kaltura is a video learning portal for continuing education and employee onboarding</div>
+    </div>
+  </div>
+</div>
+
+

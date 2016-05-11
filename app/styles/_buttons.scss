@@ -1,0 +1,125 @@
+.toggle-button {
+  height: 33px;
+  width: 75px;
+  background: #E36257;
+  position: relative;
+  margin: 15px 0;
+  border-radius: 15px;
+  @include transition(.2s); /* Safari */
+  cursor: pointer;
+  .toggle-ball {
+    height: 29px;
+    width: 29px;
+    border-radius: 14px;
+    background: $white;
+    position: absolute;
+    left: 0px;
+    display: inline-block;
+    margin: 2px;
+    @include transition(.2s); /* Safari */
+  }
+  .toggle-off-x {
+    color: $white;
+    font-size: 17px;
+    float: right;
+    opacity: 0;
+    margin: 8px 10px 0 0px;
+    @include transition(.2s); /* Safari */
+  }
+  .toggle-on-check {
+    color: $white;
+    font-size: 17px;
+    float: left;
+    opacity: 0;
+    margin: 6px 0 0 10px;
+    @include transition(.2s); /* Safari */
+  }
+  .visible {
+    opacity: 1;
+  }
+  .toggle-ball-right {
+    left: 42px !important;
+  }
+}
+
+.toggle-button-bg-green {
+  background: #94D66D;
+}
+
+.modal-button {
+  background: #BDC0C2;
+  border-radius: 8px;
+  font-family: 'GothamBook';
+  font-size: 14px;
+  color: $white;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding-top: 6px;
+  box-shadow: none;
+}
+
+.modal-button:active {
+  background: #95989D;
+}
+
+.modal-button-active {
+  background: #94D66D;
+  border-radius: 8px;
+  font-family: GothamBook;
+  font-size: 14px;
+  color: $white;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding-top: 6px;
+  box-shadow: none;
+}
+
+.modal-button-active:active {
+  background: #7AC150;
+}
+
+
+.admin-service-button {
+  border: none;
+  float: right;
+  width: 100px;
+  height: 30px;
+  background: $dark-blue-inactive;
+  color: $white;
+  border-radius: 3px;
+  padding: 3px 0 0 0;
+}
+.admin-service-button:hover {
+  background: #3A454E;
+}
+
+.modal-action-title-link {
+  float: right;
+  display: inline-block;
+  padding-bottom: 15px;
+  cursor: pointer;
+  .add-rule-x {
+    display: inline-block;
+    font-size: 15px;
+    @include transition(.2s); /* Safari */
+
+  }
+}
+.modal-action-title-link-left {
+  display: inline-block;
+  padding-right: 4px;
+  cursor: pointer;
+  .add-rule-x {
+    display: inline-block;
+    font-size: 15px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    @include transition(.2s); /* Safari */
+
+  }
+}

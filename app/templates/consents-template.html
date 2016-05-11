@@ -1,0 +1,83 @@
+<div class="modal-content-container">
+  <div class="add-consents-container" ng-class="{'show-add-consents' : addingRule}">
+    <div class="left-edit-content">
+      <p class="input-title" ng-show="isConsents">DISABLED</p>
+      <p class="input-title" ng-show="!isConsents">ENABLED</p>
+      <div class="toggle-button toggle-on" ng-class="{'active': isConsents, 'toggle-button-bg-green' : !isConsents}" ng-click="isConsents = !isConsents">
+        <div class="toggle-ball float-left" ng-class="{'toggle-ball-right' : !isConsents}"></div>
+        <div class="toggle-on-check glyphicon glyphicon-ok" ng-class="{'visible' : !isConsents}"></div>
+        <div class="toggle-off-x glyphicon glyphicon-remove" ng-class="{'visible' : isConsents}"></div>
+      </div>
+      <p class="input-title mg-top-15">FREQUENCY</p>
+      <div class="dropdown">
+        <button class="btn btn-default input-300-wd text-left dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          ONCE
+          <div class="float-right glyphicon glyphicon-menu-down"></div>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="">Action</a></li>
+          <li><a href="">Another action</a></li>
+          <li><a href="">Something else here</a></li>
+        </ul>
+      </div>
+      <p class="input-title mg-top-15">ADD RULES</p>
+      <div class="input-group input-300-wd">
+        <input type="text" class="form-control">
+        <span class="input-group-addon glyphicon glyphicon-search"></span>
+      </div>
+    </div><div class="right-edit-content">
+      <p class="input-title">TITLE</p>
+      <input class="input-300-wd"></input>
+      <p class="input-title mg-top-15">DESCRIPTION</p>
+      <textarea class="textarea-400-wd"></textarea>
+    </div>
+    <p class="input-title mg-top-15">APPLIED RULES</p>
+    <ul id="modal-table-list" class="mg-top-15">
+      <li id="modal-table-list-item">
+        <div class="consent-text-container pd-15-left">
+          <div class="consent-title">CONSENT TITLE</div>
+          <div class="consent-description">CONSENT DESCRIPTION</div>
+        </div>
+      </li>
+    </ul>
+    <div class="separation-line"></div>
+  </div>
+  <div class="consents-list">
+    <div class="modal-table-title">LIST OF CONSENTS</div>
+    <div class="modal-action-title-link" ng-click="addingRule = !addingRule">ADD CONSENT <div class="add-rule-x glyphicon glyphicon-remove" ng-class="{'x-rotate' : !addingRule}"></div></div>
+    <ul id="modal-table-list">
+      <li id="modal-table-list-item">
+        <div class="glyphicon glyphicon-ok consent-on-glyphicon"></div>
+        <div class="consent-text-container">
+          <div class="consent-title">CONSENT TITLE</div>
+          <div class="consent-description">CONSENT DESCRIPTION</div>
+        </div>
+        <div class="edit-icon glyphicon glyphicon-edit"></div>
+      </li>
+      <li id="modal-table-list-item">
+        <div class="glyphicon glyphicon-remove consent-on-glyphicon"></div>
+        <div class="consent-text-container">
+          <div class="consent-title">CONSENT TITLE</div>
+          <div class="consent-description">CONSENT DESCRIPTION</div>
+        </div>
+        <div class="edit-icon glyphicon glyphicon-edit"></div>
+      </li>
+      <li id="modal-table-list-item">
+        <div class="glyphicon glyphicon-ok consent-on-glyphicon"></div>
+        <div class="consent-text-container">
+          <div class="consent-title">CONSENT TITLE</div>
+          <div class="consent-description">CONSENT DESCRIPTION</div>
+        </div>
+        <div class="edit-icon glyphicon glyphicon-edit"></div>
+      </li>
+      <li id="modal-table-list-item">
+        <div class="glyphicon glyphicon-ok consent-on-glyphicon"></div>
+        <div class="consent-text-container">
+          <div class="consent-title">CONSENT TITLE</div>
+          <div class="consent-description">CONSENT DESCRIPTION</div>
+        </div>
+        <div class="edit-icon glyphicon glyphicon-edit"></div>
+      </li>
+    </ul>
+  </div>
+</div>

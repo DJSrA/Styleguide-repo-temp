@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "name" : "KALTURA",
+  "favorite" : true,
+  "purpose" : "Kaltura is a video learning portal for continuing education and employee onboarding",
+  "description" : "We developed a global conferencing cloud that synchronizes voice, video, and data. Web conferencing for everyone became a reality.",
+  "logo" : "../images/test-img.png"
+},
+{
+  "id": 2,
+  "name" : "WEBEX",
+  "favorite" : true,
+  "purpose" : "WebEx is a video learning portal for continuing education and employee onboarding",
+  "description" : "We developed a global conferencing cloud that synchronizes voice, video, and data. Web conferencing for everyone became a reality.",
+  "logo" : "../images/test-img.png"
+}

@@ -1,0 +1,35 @@
+<div class="modal-content-container">
+  <div class="left-edit-content">
+    <p class="input-title">DISPLAY NAME</p>
+    <div class="input-group input-300-wd">
+      <input type="text" class="form-control" placeholder="DISPLAY NAME">
+    </div>
+    <p class="input-title mg-top-15">SUPPORT CONTACT</p>
+    <div class="input-group input-300-wd">
+      <input type="text" class="form-control" placeholder="djeffords@idramp.com">
+    </div>
+  </div>
+  <div class="right-edit-content float-right">
+    <p class="input-title text-right width-100" ng-show="isActive">SERVICE DISABLED</p>
+    <p class="input-title text-right width-100" ng-show="!isActive">SERVICE ENABLED</p>
+    <div class="toggle-button toggle-on float-right" ng-class="{'active': isActive, 'toggle-button-bg-green' : !isActive}" ng-click="isActive = !isActive">
+      <div class="toggle-ball float-left" ng-class="{'toggle-ball-right' : !isActive}"></div>
+      <div class="toggle-on-check glyphicon glyphicon-ok" ng-class="{'visible' : !isActive}"></div>
+      <div class="toggle-off-x glyphicon glyphicon-remove" ng-class="{'visible' : isActive}"></div>
+    </div>
+  </div>
+  <p class="input-title mg-top-15">TAGS ({{tags.length}})</p>
+  <ul class="tags-list-ul">
+    <li ng-repeat="tag in tags">
+      <div class="inline-block">
+        {{tag.displayName}}   
+      </div> 
+      <div class="remove-tag glyphicon glyphicon-remove"></div>
+    </li>
+  </ul>
+  <p class="input-title mg-top-15 modal-action-title-link-left" ng-click="addingTag = !addingTag">ADD TAG</p><div class="add-rule-x glyphicon glyphicon-remove" ng-class="{'x-rotate' : !addingTag}"></div>
+  <div class="input-group input-300-wd">
+    <input type="text" class="form-control">
+    <span class="input-group-addon glyphicon glyphicon-search"></span>
+  </div>
+</div>
